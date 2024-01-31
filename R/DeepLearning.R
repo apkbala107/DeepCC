@@ -59,7 +59,7 @@ train_DeepCC_model <- function(trainData, trainLabels, epochs = 100, dropout = 0
 
   model %>% compile(
     loss = "categorical_crossentropy",
-    optimizer = optimizer_sgd(lr = 1e-05, momentum = 0.9, decay = 1e-07),
+    optimizer = optimizer_sgd(learning_rate = 1e-05, momentum = 0.9),
     metrics = c('accuracy')
   )
 
